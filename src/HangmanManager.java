@@ -215,7 +215,6 @@ public class HangmanManager {
         }
         return patternCounts;
     }
-
     // This helper method finds the hardest pattern in the patternGroup
     private void chooseHardest(HashMap<String, ArrayList<String>> patternGroups) {
         if (debugOn) {
@@ -237,14 +236,11 @@ public class HangmanManager {
                 maxWords = numWordsInPattern;
             }
         }
-
         // Update the current pattern with the hardest pattern found
         if (!hardestPattern.isEmpty()) {
             currentPattern = hardestPattern;
         }
     }
-
-
     // This helper method chooses the second-hardest pattern from patternGroups
     private void secondHardest(HashMap<String, ArrayList<String>> patternGroups) {
         if (debugOn) {
@@ -262,7 +258,6 @@ public class HangmanManager {
             chooseHardest(copyPatternGroups);
         }
     }
-
     // This helper method groups words by their patterns based on the given guess
     private HashMap<String, ArrayList<String>> groupWordsByPattern(char guess) {
         // Initialize a HashMap to store patterns and corresponding words
@@ -280,7 +275,6 @@ public class HangmanManager {
                 patternGroups.put(pattern, wordList);
             }
         }
-
         return patternGroups;
     }
 
